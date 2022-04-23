@@ -32,6 +32,8 @@ app.get('/track', function (req, res) {
   var tracking_instance = new trackingRequest({
     page_name: req.query.page_name,
     page_language: req.query.page_language,
+    user_country: req.query.user_country,
+    user_city: req.query.user_city,
   });
 
   /* Save the new model instance, passing a callback */
