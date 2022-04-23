@@ -23,6 +23,8 @@ var Schema = mongoose.Schema;
 var trackingRequestSchema = new Schema({
   page_name: String,
   page_language: String,
+  user_location: String,
+  user_date: Date,
 });
 var trackingRequest = mongoose.model('tracking_request', trackingRequestSchema);
 
@@ -32,8 +34,8 @@ app.get('/track', function (req, res) {
   var tracking_instance = new trackingRequest({
     page_name: req.query.page_name,
     page_language: req.query.page_language,
-    user_country: req.query.user_country,
-    user_city: req.query.user_city,
+    user_location: req.query.user_location,
+    user_date: req.query.user_date,
   });
 
   /* Save the new model instance, passing a callback */
