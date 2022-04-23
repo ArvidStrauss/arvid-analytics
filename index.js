@@ -1,7 +1,7 @@
 //Basic Configurations and Dependencies
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //enable CORS from all sources
 const cors = require('cors');
